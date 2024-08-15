@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora INSS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="container">
-        <div id="title">
-            Calculadora do INSS
+      <div id="title">Calculadora do INSS</div>
+      <form action="">
+        <div class="row">
+          <label for="salario">Salário Bruto:</label>
+          <input
+            type="number"
+            name="salario"
+            id="salario"
+            min="0"
+            step="0.01"
+          />
         </div>
         <div class="row">
-            <label for="salario">Salário Bruto:</label>
-            <input type=number name="salario" id="salario" min="0" step="0.01" oninput="calcular()"></input>
+          <span>Valor do INSS:</span>
+          <span id="inss" class="valor"></span>
         </div>
         <div class="row">
-            <span>Valor do INSS:</span>
-            <span id="inss" class="valor">R$ 0,00</span>
+          <span>FGTS:</span>
+          <span id="fgts" class="valor"></span>
         </div>
         <div class="row">
-            <span>FGTS:</span>
-            <span id="fgts" class="valor">R$ 0,00</span>
+          <span>Salário Liquido:</span>
+          <span id="liquido" class="valor"></span>
         </div>
-        <div class="row">
-            <span>Salário Liquido:</span>
-            <span id="liquido" class="valor">R$ 0,00</span>
-        </div>
+      </form>
+      <div class="botao">
+        <button onclick="exibeNaTela()">Calcular</button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
+<script src="script.js"></script>
