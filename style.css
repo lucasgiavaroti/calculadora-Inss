@@ -50,7 +50,15 @@ input[type="submit"], button {
     box-shadow: #4444447F 0px 8px 16px;
     font-size: 16px;
 }
-
 .valor {
     text-align: right;
+    font-weight: bold;
+}
+.botao{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+button{
+    cursor: pointer;
 }
